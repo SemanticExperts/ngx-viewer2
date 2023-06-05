@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NgxViewerModule } from 'ngx-viewer';
+import {NgxViewer2Module} from "../../projects/ngx-viewer2/src/lib/ngx-viewer2.module";
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { NgxViewerModule } from 'ngx-viewer';
   ],
   imports: [
     BrowserModule,
-    NgxViewerModule
+    NgxViewer2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

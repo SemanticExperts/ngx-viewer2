@@ -1,0 +1,36 @@
+{
+  "name": "ngx-viewer2",
+  "version": "1.0.0",
+  "description": "Angular 15+ directive for the Viewer.js library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeninOchoa/ngx-viewer2.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/LeninOchoa/ngx-viewer2/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "L.E.O.R",
+    "email": "l.ochoa@synios.de",
+    "url": "https://www.synios.de/"
+  },
+  "keywords": [
+    "angular",
+    "ngx",
+    "viewer",
+    "viewerjs",
+    "viewer.js",
+    "directive",
+    "image viewer"
+  ],
+  "homepage": "https://github.com/LeninOchoa/ngx-viewer2",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

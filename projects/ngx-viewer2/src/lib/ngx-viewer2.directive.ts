@@ -1,10 +1,10 @@
-﻿import { Directive, ElementRef, NgModule, OnDestroy, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
+﻿import { Directive, ElementRef, OnDestroy, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
 import Viewer from 'viewerjs';
 
 @Directive({
-  selector: '[ngxViewer]'
+  selector: '[ngxViewer2]'
 })
-export class NgxViewerDirective implements AfterViewInit, OnDestroy {
+export class NgxViewer2Directive implements AfterViewInit, OnDestroy {
   @Input() viewerOptions: Viewer.Options = {};
 
   @Output() viewerReady: EventEmitter<Event> = new EventEmitter<Event>();
@@ -17,7 +17,7 @@ export class NgxViewerDirective implements AfterViewInit, OnDestroy {
   @Output() viewerZoom: EventEmitter<Event> = new EventEmitter<Event>();
   @Output() viewerZoomed: EventEmitter<Event> = new EventEmitter<Event>();
 
-  instance: Viewer;
+  instance!: Viewer;
 
   private nativeElement: HTMLElement;
 
@@ -40,6 +40,8 @@ export class NgxViewerDirective implements AfterViewInit, OnDestroy {
       transition: false,
       ...this.viewerOptions
     });
+
+    this.instance.zoomTo(1);
 
     this.nativeElement.addEventListener('ready', event => this.viewerReady.emit(event), false);
     this.nativeElement.addEventListener('show', event => this.viewerShow.emit(event), false);
