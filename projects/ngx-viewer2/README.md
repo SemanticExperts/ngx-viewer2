@@ -10,7 +10,7 @@ Forked from [winteragency/ngx-viewer](https://github.com/winteragency/ngx-viewer
 
 Add both this library and the original Viewer.js library as dependencies to your project:
 
-`npm install ngx-viewer viewerjs`
+`npm install ngx-viewer2 viewerjs`
 
 Import the module into your application's `app.module.ts`:
 
