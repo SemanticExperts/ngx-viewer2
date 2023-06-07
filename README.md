@@ -20,7 +20,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // import ngx-viewer module
-import { NgxViewer2Module } from 'ngx-viewer2';
+import { NgxViewer2Module } from "@lenin.ochoa/ngx-viewer2";
 
 @NgModule({
   declarations: [
