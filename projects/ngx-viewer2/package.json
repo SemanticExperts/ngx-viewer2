@@ -4,7 +4,7 @@
   "description": "Angular 15+ directive for the Viewer.js library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LeninOchoa/ngx-viewer2.git"
+    "url": "https://github.com/SemanticExperts/ngx-viewer2.git"
   },
   "peerDependencies": {
     "@angular/common": "^15.2.0",
@@ -19,6 +19,11 @@
     "email": "l.ochoa@synios.de",
     "url": "https://www.synios.de/"
   },
+  "contributors": [
+    {
+      "name": "BrandonFL"
+    }
+  ],
   "keywords": [
     "angular",
     "ngx",
@@ -28,7 +33,7 @@
     "directive",
     "image viewer"
   ],
-  "homepage": "https://github.com/LeninOchoa/ngx-viewer2",
+  "homepage": "https://github.com/SemanticExperts/ngx-viewer2",
   "dependencies": {
     "tslib": "^2.3.0"
   },

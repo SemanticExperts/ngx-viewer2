@@ -4,11 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ngx-viewer --prod",
+    "build": "ng build ngx-viewer --prod && cp README.md ./dist/ngx-viewer2/README.md",
     "watch": "ng build --watch --configuration development",
     "test": "ng test ngx-viewer",
-    "lint": "ng lint ngx-viewer",
-    "publish:lib": "cp README.md ./dist/ngx-viewer2/README.md && npm publish ./dist/ngx-viewer2"
+    "lint": "ng lint ngx-viewer"
   },
   "private": true,
   "dependencies": {
