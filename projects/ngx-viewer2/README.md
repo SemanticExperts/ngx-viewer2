@@ -1,6 +1,8 @@
 # ngx-viewer2 :mag_right:
 
-[![Latest Stable Version](https://img.shields.io/npm/v/ngx-viewer.svg)](https://www.npmjs.com/package/@lenin.ochoa/ngx-viewer2) [![Total Downloads](https://img.shields.io/npm/dt/ngx-viewer2.svg)](https://npm-stat.com/charts.html?package=ngx-viewer2) [![License](https://img.shields.io/github/license/winteragency/ngx-viewer.svg)](https://github.com/LeninOchoa/ngx-viewer2) [![Made by L.E.O.R](https://img.shields.io/badge/Made%20by-L.E.O.R.-green)](https://synios.de)
+[![Latest Stable Version](https://img.shields.io/npm/v/@jaguards/ngx-viewer2.svg)](https://www.npmjs.com/package/@jaguards/ngx-viewer2)  
+[![License](https://img.shields.io/github/license/winteragency/ngx-viewer.svg)](https://github.com/LeninOchoa/ngx-viewer2) 
+[![Made by L.E.O.R](https://img.shields.io/badge/Made%20by-L.E.O.R.-green)](https://synios.de)
 
 This is a simple Angular 15+ directive wrapping the amazing [Viewer.js](https://fengyuanchen.github.io/viewerjs/) library.
 

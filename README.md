@@ -1,6 +1,8 @@
 # ngx-viewer2 :mag_right:
 
-[![Latest Stable Version](https://img.shields.io/npm/v/ngx-viewer.svg)](https://www.npmjs.com/package/@lenin.ochoa/ngx-viewer2) [![Total Downloads](https://img.shields.io/npm/dt/ngx-viewer2.svg)](https://npm-stat.com/charts.html?package=ngx-viewer2) [![License](https://img.shields.io/github/license/winteragency/ngx-viewer.svg)](https://github.com/LeninOchoa/ngx-viewer2) [![Made by L.E.O.R](https://img.shields.io/badge/Made%20by-L.E.O.R.-green)](https://synios.de)
+[![Latest Stable Version](https://img.shields.io/npm/v/@jaguards/ngx-viewer2.svg)](https://www.npmjs.com/package/@jaguards/ngx-viewer2)
+[![License](https://img.shields.io/github/license/winteragency/ngx-viewer.svg)](https://github.com/LeninOchoa/ngx-viewer2) 
+[![Made by L.E.O.R](https://img.shields.io/badge/Made%20by-L.E.O.R.-green)](https://synios.de)
 
 This is a simple Angular 15+ directive wrapping the amazing [Viewer.js](https://fengyuanchen.github.io/viewerjs/) library.
 
@@ -10,7 +12,7 @@ Forked from [winteragency/ngx-viewer](https://github.com/winteragency/ngx-viewer
 
 Add both this library and the original Viewer.js library as dependencies to your project:
 
-`npm install @lenin.ochoa/ngx-viewer2 viewerjs`
+`npm install @jaguards/ngx-viewer2 viewerjs`
 
 Import the module into your application's `app.module.ts`:
 
@@ -20,7 +22,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // import ngx-viewer module
-import { NgxViewer2Module } from "@lenin.ochoa/ngx-viewer2";
+import { NgxViewer2Module } from "@jaguards/ngx-viewer2";
 
 @NgModule({
   declarations: [
