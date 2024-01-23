@@ -58,6 +58,10 @@ jobs:
           mkdir .git
           npm version ${{ env.VERSION_NUMBER }} || true
 
+      - name: Build version
+        shell: bash
+        run: npm run build
+
       - name: Update git with the new version
         shell: bash
         continue-on-error: true
@@ -74,6 +78,7 @@ jobs:
       - name: Publish
         uses: SemanticExperts-actions/npm-publish@v3.0.1 # backup of the action JS-DevTools/npm-publish@v3.0.1
         with:
+          package: ./dist/ngx-viewer2/package.json
           dry-run: ${{ env.DRY_RUN }}
           registry: ${{ vars.NPM_REGISTRY }}
           token: ${{ secrets.NPM_TOKEN }}
