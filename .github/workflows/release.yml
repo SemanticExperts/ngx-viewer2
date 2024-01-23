@@ -1,0 +1,63 @@
+name: Release Node.js Package
+on:
+  workflow_dispatch: # Manually run with button
+    inputs:
+      version-number:
+        type: string
+        description: 'Version number'
+        default: 'v'
+        required: true
+      tag:
+        type: string
+        description: 'Tag'
+        default: 'latest'
+        required: true
+
+jobs:
+  release:
+    permissions:
+      contents: write
+      id-token: write
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.event.release.target_commitish || github.ref_name }}
+      VERSION_NUMBER: ${{ github.event.inputs.version-number || github.ref_name }}
+      TAG: ${{ github.event.inputs.tag || 'latest' }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Config Git
+        continue-on-error: true
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Update version
+        run: npm version ${{ env.VERSION_NUMBER }} || true
+
+      - name: Update git with the new version
+        continue-on-error: true
+        run: |
+          git push origin HEAD:$BRANCH_NAME || true
+          git tag -fa $VERSION_NUMBER -m "Update version to $VERSION_NUMBER" || true
+          git push origin $VERSION_NUMBER --force || true
+
+      - name: Publish
+        uses: SemanticExperts-actions/npm-publish@v3.0.1 # backup of the action JS-DevTools/npm-publish@v3.0.1
+        with:
+          registry: ${{ vars.NPM_REGISTRY }}
+          token: ${{ secrets.NPM_TOKEN }}
+          tag: ${{ env.TAG }}
+          access: ${{ vars.NPM_ACCESS }}
+          provenance: ${{ vars.NPM_PROVENANCE_ENABLED }}
+          strategy: ${{ vars.NPM_STRATEGY }}
