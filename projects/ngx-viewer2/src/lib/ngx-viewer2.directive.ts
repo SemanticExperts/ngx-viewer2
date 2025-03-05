@@ -2,7 +2,8 @@
 import Viewer from 'viewerjs';
 
 @Directive({
-  selector: '[ngxViewer2]'
+    selector: '[ngxViewer2]',
+    standalone: false
 })
 export class NgxViewer2Directive implements AfterViewInit, OnDestroy {
   @Input() viewerOptions: Viewer.Options = {};

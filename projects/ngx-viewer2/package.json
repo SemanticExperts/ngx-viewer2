@@ -1,14 +1,14 @@
 {
   "name": "@jaguards/ngx-viewer2",
-  "version": "18.2.13",
+  "version": "19.2.0",
   "description": "Angular 15+ directive for the Viewer.js library",
   "repository": {
     "type": "git",
     "url": "https://github.com/SemanticExperts/ngx-viewer2.git"
   },
   "peerDependencies": {
-    "@angular/common": "^18.2.13",
-    "@angular/core": "^18.2.13"
+    "@angular/common": "^19.2.0",
+    "@angular/core": "^19.2.0"
   },
   "bugs": {
     "url": "https://github.com/LeninOchoa/ngx-viewer2/issues"
